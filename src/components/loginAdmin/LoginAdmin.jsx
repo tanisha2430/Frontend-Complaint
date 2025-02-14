@@ -30,6 +30,8 @@ const LoginAdmin = () => {
       window.location.reload();
 
       alert(data.message);
+      window.location.href="/admindashboard";
+
       navigate('/admindashboard');
     } else {
       alert(data.error);
