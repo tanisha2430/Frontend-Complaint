@@ -21,9 +21,11 @@ const LoginUser = () => {
     });
     const data = await response.json();
     console.log(data);
+
     if (data.client) {
-      localStorage.setItem('client', data.client);
+    localStorage.setItem('client', data.client);
       // toast.success(data.message)
+      window.location.reload();
       alert(data.message)
       navigate('/');
     }else{

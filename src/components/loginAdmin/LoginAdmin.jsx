@@ -27,6 +27,8 @@ const LoginAdmin = () => {
     console.log("res",response);
     if (response.ok) { // Check if response is successful
       localStorage.setItem('manager', data.manager);
+      window.location.reload();
+
       alert(data.message);
       navigate('/admindashboard');
     } else {

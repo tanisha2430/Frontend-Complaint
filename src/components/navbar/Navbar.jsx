@@ -14,27 +14,32 @@ function Navbar() {
 
   useEffect(() => {
     // Check if the user is authenticated
-    const checkAuth = () => {
-      // const client = localStorage.getItem('client');
-      // const manager = localStorage.getItem('manager');
+    // const checkAuth = () => {
+      // window.location.reload();
+      const client = localStorage.getItem('client');
+      const manager = localStorage.getItem('manager');
+      console.log("client is",client);
+      console.log("managaer is",manager);
+      
+      
       if(localStorage.getItem('client') || localStorage.getItem('manager')){
 
         setIsAuthenticated(true); 
       }
-    };
+    // };
 
-    checkAuth();
+    // checkAuth();
 
     // Listen for storage changes to update authentication status
-    const handleStorageChange = () => {
-      checkAuth();
-    };
+    // const handleStorageChange = () => {
+    //   checkAuth();
+    // };
 
-    window.addEventListener('storage', handleStorageChange);
+    // window.addEventListener('storage', handleStorageChange);
 
-    return () => {
-      window.removeEventListener('storage', handleStorageChange);
-    };
+    // return () => {
+    //   window.removeEventListener('storage', handleStorageChange);
+    // };
   }, []);
 
   const toggleNav = () => {
@@ -49,12 +54,13 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full flex flex-wrap overflow-hidden justify-between items-center p-7 py-10 sm:p-7 top-0 bg-pink-950">
+    <nav className="w-full flex flex-wrap overflow-hidden justify-between items-center p-7 sm:p-7 top-0 bg-pink-950">
       <Tippy content="Register complaints here!">
         <Link to="/">
           <div className="flex">
-            <PiNotepadBold className="text-white text-2xl" />
-            <h2 className="text-white font-bold ml-2 mb-5 tracking-wider">ComplaintMania</h2>
+            <PiNotepadBold className="text-white 
+             mt-2 text-2xl" />
+            <h2 className="text-white mt-2 font-bold ml-2 mb-5 tracking-wider">ComplaintMania</h2>
           </div>
         </Link>
       </Tippy>
