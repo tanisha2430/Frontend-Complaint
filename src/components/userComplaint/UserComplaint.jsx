@@ -51,11 +51,11 @@ const UserComplaint = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className='flex-grow flex items-center justify-center bg-gradient-to-r from-red-300 bg-cover p-4'>
-        <div className='bg-pink-950 bg-opacity-70 shadow-2xl text-white p-5 border-2 text-[20px] w-full max-w-lg md:max-w-2xl lg:max-w-4xl'>
+        <div className='bg-pink-950 bg-opacity-70 shadow-2xl text-white p-5 border-2 text-[20px] w-full max-w-lg md:max-w-2xl lg:max-w-4xl mb-5'>
           <h2 className="p-4 rounded-lg font-bold bg-pink-950 text-white text-center">FILE COMPLAINT</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label className="block text-white font-medium mb-2" htmlFor="name">Name</label>
+          <form onSubmit={handleSubmit}  >
+            <div className="mb-4 text-[18px] sm:text-[20px]">
+              <label className="block text-white font-medium mb-2 mt-3" htmlFor="name">Name</label>
               <input
                 type="text"
                 name="name"
@@ -65,7 +65,7 @@ const UserComplaint = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 text-[18px] sm:text-[20px]">
               <label className="block text-white font-medium mb-2" htmlFor="email">Email</label>
               <input
                 type="email"
@@ -76,7 +76,7 @@ const UserComplaint = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 text-[18px] sm:text-[20px]">
               <label className="block text-white font-medium mb-2" htmlFor="department">Department</label>
               <input
                 type='text'
@@ -87,7 +87,7 @@ const UserComplaint = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 text-[18px] sm:text-[20px]">
               <label className="block text-white font-medium mb-2" htmlFor="subject">Subject of concern</label>
               <input
                 type="text"
@@ -98,7 +98,7 @@ const UserComplaint = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 text-[18px] sm:text-[20px]">
               <label className="block text-white font-medium mb-2" htmlFor="description">Description</label>
               <textarea
                 name="description"
