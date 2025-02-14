@@ -17,7 +17,7 @@ const SignupAdmin = () => {
       alert("Passwords do not match");
       return;
     }
-    const url = "http://localhost:3000/api/admin";
+    const url = "https://complaint-mania-be.onrender.com/api/admin";
     const response = await fetch(url, {
       method: 'POST',
       headers: {

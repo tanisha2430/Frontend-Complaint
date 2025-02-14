@@ -16,7 +16,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const fetchComplaints = async () => {
-      const response = await fetch('http://localhost:3000/api/complaint', {
+      const response = await fetch('https://complaint-mania-be.onrender.com/api/complaint', {
         headers: {
           'Content-type': 'application/json',
           'manager': localStorage.getItem('manager')

@@ -19,7 +19,7 @@ const SignupUser = () => {
         alert("password not matched")
         return
       }
-      const url = "http://localhost:3000/api/users";
+      const url = "https://complaint-mania-be.onrender.com/api/users";
       const response = await fetch(url, {
         method: 'POST',
         headers: {

@@ -11,7 +11,7 @@ const LoginUser = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:3000/api/users/login";
+    const url = "https://complaint-mania-be.onrender.com/api/users/login";
     const response = await fetch(url, {
       method: 'POST',
       headers: {

@@ -27,7 +27,7 @@ const UserComplaint = () => {
       return alert("Please Login first");
     }
 
-    const url = "http://localhost:3000/api/complaint";
+    const url = "https://complaint-mania-be.onrender.com/api/complaint";
     const response = await fetch(url, {
       method: 'POST',
       headers: {

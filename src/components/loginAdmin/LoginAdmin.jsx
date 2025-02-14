@@ -13,7 +13,7 @@ const LoginAdmin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3000/api/admin/login";
+      const url = "https://complaint-mania-be.onrender.com/api/admin/login";
     const response = await fetch(url, {
       method: 'POST',
       headers: {
