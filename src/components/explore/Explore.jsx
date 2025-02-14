@@ -5,7 +5,7 @@ function Explore() {
   return (
     <div className=" w-full p-5 md:p-10 from-red-300 to-red-50 ">
       <div className="flex flex-col p-4 md:p-8">
-        <h1 className="bg-pink-900 p-4 text-center text-white text-xl md:text-2xl mb-5 rounded-lg font-bold">
+        <h1 className="bg-pink-900 p-4  text-center text-white text-xl md:text-2xl mb-5 rounded-lg font-bold">
           Register Complaints Seamlessly!
         </h1>
         <p className="font-semibold text-sm md:text-base">

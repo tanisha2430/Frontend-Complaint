@@ -21,9 +21,9 @@ function Home() {
   return (
     <>
       <div className="bg-gradient-to-r from-red-300 to-red-50">
-        <div className="flex flex-col md:flex-row h-[80vh] w-full">
+        <div className="flex flex-col pt-10  md:flex-row  h-[80vh] w-full">
           <div className="flex flex-1 items-center justify-center  md:p-0">
-            <div className="text-center md:text-left md:ml-20">
+            <div className="text-center md:text-left md:ml-20 px-10">
               <h1 className="font-bold text-3xl md:text-4xl mb-5 text-pink-950 font-myFont1">
                 FIX YOUR <br />
                 <span className="font-bold text-4xl md:text-5xl mb-5 text-pink-800">{text}</span>
@@ -57,7 +57,7 @@ function Home() {
 
 
 
-        <div className="h-[85vh] overflow-hidden">
+        {/* <div className="h-[85vh] overflow-hidden">
         <h1 className="bg-pink-900 p-4 text-center text-white m-8 text-xl md:text-2xl rounded-lg font-bold mb-20">
                 Value Proposition
               </h1>
@@ -80,7 +80,43 @@ function Home() {
             <p className='text-center'> promotes transparency and holds administrators accountable for addressing concerns</p>
             </div>
           </div>
+        </div> */}
+          <div className="min-h-[60vh] px-4 py-10 flex flex-col items-center w-full">
+      {/* Heading */}
+      <h1 className="bg-pink-900  px-6 py-4 text-center text-white text-lg sm:text-xl md:text-2xl rounded-lg font-bold mb-10 w-full max-w-3xl">
+        Value Proposition
+      </h1>
+
+      {/* Cards Container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 items-center mx-auto gap-10 w-full max-w-6xl">
+        {/* Card 1 */}
+        <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md max-w-xs sm:max-w-sm text-center">
+          <MdEditNote className="text-6xl text-pink-800 mb-3" />
+          <h2 className="font-semibold text-xl">Complaint Submissions</h2>
+          <p className="text-gray-700 mt-2">
+            Ensure that complaints are submitted seamlessly, maintaining user trust in the platform.
+          </p>
         </div>
+
+        {/* Card 2 */}
+        <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md max-w-xs sm:max-w-sm text-center">
+          <MdOutlineConnectWithoutContact className="text-6xl text-pink-800 mb-3" />
+          <h2 className="font-semibold text-xl">Enhanced Communication</h2>
+          <p className="text-gray-700 mt-2">
+            A complaint website facilitates direct and efficient communication between users and administrators.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md max-w-xs sm:max-w-sm text-center">
+          <IoDiamondOutline className="text-6xl text-pink-800 mb-3" />
+          <h2 className="font-semibold text-xl">Transparency & Accountability</h2>
+          <p className="text-gray-700 mt-2">
+            Promotes transparency and holds administrators accountable for addressing concerns.
+          </p>
+        </div>
+      </div>
+    </div>
         <div className="h-[80vh] overflow-hidden ">
         <h1 className="bg-pink-900 p-4 text-center text-white m-8 text-xl md:text-2xl rounded-lg font-bold mb-20">
                Testimonials

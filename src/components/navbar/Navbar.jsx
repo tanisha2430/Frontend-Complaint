@@ -15,9 +15,12 @@ function Navbar() {
   useEffect(() => {
     // Check if the user is authenticated
     const checkAuth = () => {
-      const client = localStorage.getItem('client');
-      const manager = localStorage.getItem('manager');
-      setIsAuthenticated(!!client || !!manager); // set true if either client or manager is present
+      // const client = localStorage.getItem('client');
+      // const manager = localStorage.getItem('manager');
+      if(localStorage.getItem('client') || localStorage.getItem('manager')){
+
+        setIsAuthenticated(true); 
+      }
     };
 
     checkAuth();
@@ -46,12 +49,12 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full flex flex-wrap justify-between items-center p-7 top-0 bg-pink-950">
+    <nav className="w-full flex flex-wrap overflow-hidden justify-between items-center p-7 py-10 sm:p-7 top-0 bg-pink-950">
       <Tippy content="Register complaints here!">
         <Link to="/">
           <div className="flex">
             <PiNotepadBold className="text-white text-2xl" />
-            <h2 className="text-white font-bold ml-2 tracking-wider">ComplaintMania</h2>
+            <h2 className="text-white font-bold ml-2 mb-5 tracking-wider">ComplaintMania</h2>
           </div>
         </Link>
       </Tippy>
@@ -69,7 +72,7 @@ function Navbar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `${isActive ? 'bg-pink-400 rounded p-2 text-black' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
+                `${isActive ? 'underline text-white' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
               }
             >
               Home
@@ -79,7 +82,7 @@ function Navbar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `${isActive ? 'bg-pink-400 rounded p-2 text-black' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
+                `${isActive ? 'underline text-white' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
               }
             >
               About
@@ -89,7 +92,7 @@ function Navbar() {
             <NavLink
               to="/complaint"
               className={({ isActive }) =>
-                `${isActive ? 'bg-pink-400 rounded p-2 text-black' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
+                `${isActive ? 'underline text-white' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
               }
             >
               Register Complaint
@@ -99,7 +102,7 @@ function Navbar() {
             <NavLink
               to="/admindashboard"
               className={({ isActive }) =>
-                `${isActive ? 'bg-pink-400 rounded p-2 text-black' : 'text-slate-300'} hover:text-white hover:border-white cursor-pointer`
+                `${isActive ? 'underline text-white' : 'text-slate-300'} hover:text-white  hover:border-white cursor-pointer`
               }
             >
               Admin Dashboard
@@ -107,7 +110,7 @@ function Navbar() {
           </li>
           <li>
             {!isAuthenticated ? (
-              <NavLink to="/loginsignup" className="bg-pink-800 p-2 rounded-lg hover:bg-pink-500 hover:text-black">
+              <NavLink to="/loginsignup" className="bg-pink-800 overflow-hidden p-1 rounded-lg hover:bg-pink-600 hover:text-black">
                 Signin/Signup
               </NavLink>
             ) : (

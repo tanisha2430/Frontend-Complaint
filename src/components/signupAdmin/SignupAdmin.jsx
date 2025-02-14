@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SignupAdmin = () => {
   const navigate = useNavigate();
@@ -96,6 +96,10 @@ const SignupAdmin = () => {
             Signup
           </button>
         </form>
+         <p className="mt-5 text-center">
+                          Already an admin?
+                            <Link to="/admin" className="text-pink-950 font-semibold p-2">Login</Link>
+                          </p>
       </div>
     </div>
   );
